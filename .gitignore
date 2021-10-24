@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 .mvn/
 src/main/resources/application-*
+ct.sh
 
 ### STS ###
 .apt_generated

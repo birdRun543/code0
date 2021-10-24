@@ -1,6 +1,6 @@
-package com.example.code0.controller;
+package com.birdRun543.code0.controller;
 
-import com.example.code0.common.BaseController;
+import com.birdRun543.code0.common.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
