@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
  * Controlle
  * @author hanbing
  */
-public class BaseController {// todo 20211024
+public class BaseController {// todo 202110241
 
     @Autowired
     protected HttpServletRequest request;
