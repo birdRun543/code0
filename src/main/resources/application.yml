@@ -1,0 +1,22 @@
+server:
+  port: 3079
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: code0
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
+
+logging:
+  level:
+    root: WARN
+    com.example.code0: DEBUG
