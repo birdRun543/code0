@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("test")
-public class TestController extends BaseController {
+public class ProcessController extends BaseController {
 
 
     @GetMapping("hello")

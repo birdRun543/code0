@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Controller基类
+ * Controlle
  * @author hanbing
  */
-public class BaseController {
+public class BaseController {// todo 20211024
 
     @Autowired
     protected HttpServletRequest request;
