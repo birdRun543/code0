@@ -1,4 +1,4 @@
-package com.example.code0.common;
+package com.birdRun543.code0.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
