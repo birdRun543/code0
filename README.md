@@ -12,3 +12,4 @@ my precious
 |   |getMonthDay1    |get the first day of the month | 
 |   |countRemainDay    |calculate remain days | 
 
+see [hisroty](https://github.com/birdRun543/code0/wiki)
