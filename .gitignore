@@ -6,6 +6,7 @@ target/
 .mvn/
 src/main/resources/application-*
 ct.sh
+src/main/java/com/birdRun543/code0/common/util/MainTest.java
 
 ### STS ###
 .apt_generated
