@@ -4,12 +4,12 @@ springboot toolbox
 
 my precious
 
-## 10.27
+## 10.28
 
 | class   | function    |usage |
 | ---- | ---- |---- |
-|com.birdRun543.code0.common.util.LocalDateUtil   |       |handle some LocalDateTime format   | 
-|   |getMonthDay1    |get the first day of the month | 
-|   |countRemainDay    |calculate remain days | 
+|com.birdRun543.code0.common.util.VideoHandleUtil   |       |handle video file  | 
+|   |saveFirstImage    |fetch the first image of the video | 
+|   |getVideoTime    |fetch the time length of the video | 
 
 see [hisroty](https://github.com/birdRun543/code0/wiki)

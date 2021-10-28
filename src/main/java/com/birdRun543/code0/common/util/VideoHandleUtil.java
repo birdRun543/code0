@@ -17,6 +17,13 @@ import java.util.regex.Pattern;
  */
 @Slf4j
 public class VideoHandleUtil {
+    /**
+     * fetch the first image of the video
+     * @param videoFile video path
+     * @param saveDir save path
+     * @param fileName file name
+     * @return Boolean
+     */
     public static Boolean saveFirstImage(String videoFile, String saveDir, String fileName) {
 
         List<String> commands = new ArrayList<>();
@@ -55,7 +62,7 @@ public class VideoHandleUtil {
     }
 
     /**
-     * 获取视频总时间
+     * fetch the time length of the video
      */
     public static String getVideoTime(String videoPath) {
         List<String> commands = new ArrayList<>();
@@ -94,6 +101,7 @@ public class VideoHandleUtil {
     }
 
     public static void main(String[] args) {
-        String s = VideoHandleUtil.getVideoTime("/tmp/ssssss.mp4");
+        VideoHandleUtil.getVideoTime("/tmp/ssssss.mp4");
+        VideoHandleUtil.saveFirstImage("/tmp/ssssss.mp4","/tmp","imgfile");
     }
 }
