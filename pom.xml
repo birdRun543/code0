@@ -35,12 +35,6 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-
-        <repository>
-            <id>nexus</id>
-            <name>Team Nexus Repository</name>
-            <url>http://heletech.cn:8081/nexus/content/groups/public/</url>
-        </repository>
     </repositories>
 
     <groupId>com.birdRun543</groupId>
