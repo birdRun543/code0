@@ -20,7 +20,7 @@ import java.util.Properties;
 @Slf4j
 public class CodeGenerator {
 
-    // 1. 设置表名
+    // 1. set table name
     private static final String[] tableNames = {"table1"};
     // 2. 设置包名
     private static final String packageName = "com.birdRun543.code0";
