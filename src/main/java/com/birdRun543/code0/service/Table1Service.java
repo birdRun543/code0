@@ -16,5 +16,10 @@ import java.util.List;
  */
 public interface Table1Service extends IService<Table1> {
 
+    /**
+     * get items of table
+     * @param query query
+     * @return list
+     */
     List<Table1> getList(BasicQuery query);
 }
