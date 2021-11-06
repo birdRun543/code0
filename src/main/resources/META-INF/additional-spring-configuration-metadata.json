@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "beetlsql.enabled",
+      "type": "java.lang.String",
+      "description": "BeetlSql should not run any Mapper from '[com]' ."
+  }
+] }
