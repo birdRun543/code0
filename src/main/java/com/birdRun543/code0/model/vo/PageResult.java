@@ -15,6 +15,7 @@ public class PageResult<T> {
 
     private List<T> rows;
 
+    @SuppressWarnings("unused")
     public PageResult() {
     }
 
