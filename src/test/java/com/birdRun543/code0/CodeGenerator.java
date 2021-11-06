@@ -28,7 +28,7 @@ public class CodeGenerator {
     private static final String PROPERTY_NAME = "application-dev.yml";
 
 
-    // 4. 启动工具
+    // 4. start
     public static void main(String[] args) {
         generateByTables(tableNames);
     }
@@ -89,7 +89,7 @@ public class CodeGenerator {
         pc.setEntity("model");
         mpg.setPackageInfo(pc);
 
-        // 配置模板
+        // set Template Config
         TemplateConfig templateConfig = new TemplateConfig();
         //指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
         // 如果需要设置不在package内生成xml,则set(null)
