@@ -1,0 +1,7 @@
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://XXXXX
+    username: XXX
+    password: XXX

@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .mvn/
-src/main/resources/application-*
+src/main/resources/application-*.yml
 ct.sh
 src/main/java/com/birdRun543/code0/common/util/MainTest.java
 
