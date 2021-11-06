@@ -102,9 +102,11 @@ public class CodeGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         strategy.setCapitalMode(true);  // 大写命名
-        strategy.setEntityLombokModel(true); // lombok模型
-        strategy.setColumnNaming(NamingStrategy.underline_to_camel); // 表名映射策略
-        strategy.setNaming(NamingStrategy.underline_to_camel);  // 字段映射策略
+        strategy.setEntityLombokModel(true); // lombok
+        // Strategy of table column name
+        strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+        // Strategy of table name
+        strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setTablePrefix("sys_", "tb_", "school_", "exam_", "net_", "pendi_");  // 表前缀
         strategy.setInclude(tableNames);
         mpg.setStrategy(strategy);
