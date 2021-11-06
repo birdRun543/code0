@@ -22,7 +22,7 @@ public class CodeGenerator {
 
     // 1. set table name
     private static final String[] tableNames = {"table1"};
-    // 2. 设置包名
+    // 2. set package name
     private static final String packageName = "com.birdRun543.code0";
     // 3. 设置yml路径
     private static final String PROPERTY_NAME = "application-dev.yml";
