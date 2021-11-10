@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class MybatisPlusConfig {
 
     /**
-     * 注入sql注入器
+     * Sql Injector
      */
     @Bean
     public ISqlInjector sqlInjector() {
@@ -28,7 +28,7 @@ public class MybatisPlusConfig {
     }
 
     /**
-     * 分页插件
+     * page method
      */
 
     @Bean
