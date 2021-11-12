@@ -12,7 +12,6 @@ import java.util.List;
 
 /**
  * @author hanbing
- *
  * @date 2021-10-24 12:32
  */
 @Controller
@@ -35,7 +34,7 @@ public class ProcessController extends BaseController {
     @PostMapping("table1/list")
     @ResponseBody
     public PageResult<Table1> getList(@RequestBody BasicQuery query) {
-        List<Table1> table1List= table1Service.getList(query);
+        List<Table1> table1List = table1Service.getList(query);
         return new PageResult<>(table1List);
     }
 }
