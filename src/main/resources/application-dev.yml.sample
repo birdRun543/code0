@@ -1,4 +1,4 @@
-# 数据库配置
+# set database
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
