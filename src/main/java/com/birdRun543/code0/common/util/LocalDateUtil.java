@@ -2,8 +2,10 @@ package com.birdRun543.code0.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -15,16 +17,21 @@ public class LocalDateUtil {
 
     public static LocalDateTime getMonthDay1(LocalDateTime localDateTime) {
         LocalDateTime monthDay1 = localDateTime.withDayOfMonth(1);
-        DateTimeFormatter df1 = DateTimeFormatter.ofPattern("yyyy-MM-dd 00:00:00");
-        DateTimeFormatter df2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        return LocalDateTime.parse(df1.format(monthDay1), df2);
+        return LocalDateTime.of(monthDay1.toLocalDate(), LocalTime.MIN);
+    }
+
+    public static LocalDateTime getYearDay1(LocalDateTime localDateTime) {
+        LocalDateTime yearDay1 = localDateTime.withDayOfYear(1);
+        return LocalDateTime.of(yearDay1.toLocalDate(), LocalTime.MIN);
+    }
+
+    public static LocalDateTime getMondayZero(LocalDateTime localDateTime) {
+        LocalDateTime monday = LocalDateTime.of(localDateTime.toLocalDate(), LocalTime.MIN).with(DayOfWeek.MONDAY);
+        return LocalDateTime.of(monday.toLocalDate(), LocalTime.MIN);
     }
 
     public static LocalDateTime getDayZero(LocalDateTime localDateTime) {
-
-        DateTimeFormatter df1 = DateTimeFormatter.ofPattern("yyyy-MM-dd 00:00:00");
-        DateTimeFormatter df2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        return LocalDateTime.parse(df1.format(localDateTime), df2);
+        return LocalDateTime.of(localDateTime.toLocalDate(), LocalTime.MIN);
     }
 
     /**
