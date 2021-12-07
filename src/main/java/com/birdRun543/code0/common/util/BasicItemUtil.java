@@ -2,15 +2,12 @@ package com.birdRun543.code0.common.util;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.core.io.ClassPathResource;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author hanbing
@@ -18,8 +15,11 @@ import java.util.Properties;
 @Slf4j
 public class BasicItemUtil {
 
+    static final Pattern PATTERN = Pattern.compile("[\u4e00-\u9fa5]");
+
     /**
      * fetch properties from .yml file
+     *
      * @param propertyName property name
      * @return Properties
      */
@@ -34,5 +34,10 @@ public class BasicItemUtil {
         }
 
         return null;
+    }
+
+    public static boolean isChinese(String str) {
+        Matcher m = PATTERN.matcher(str);
+        return m.find();
     }
 }
