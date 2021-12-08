@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.core.io.ClassPathResource;
 
+import java.lang.reflect.Field;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -36,8 +37,15 @@ public class BasicItemUtil {
         return null;
     }
 
-    public static boolean isChinese(String str) {
-        Matcher m = PATTERN.matcher(str);
-        return m.find();
+    static String getFieldValueByFieldName(String fieldName, Object object) {
+        try {
+            Field field = object.getClass().getDeclaredField(fieldName);
+            //对private的属性的访问
+            field.setAccessible(true);
+            return String.valueOf(field.get(object));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
