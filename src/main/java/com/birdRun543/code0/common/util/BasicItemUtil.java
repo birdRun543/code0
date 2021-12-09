@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class BasicItemUtil {
 
-    static final Pattern PATTERN = Pattern.compile("[\u4e00-\u9fa5]");
+    private static final Pattern UNDERLINE_PATTERN = Pattern.compile("_(\\w)");
 
     /**
      * fetch properties from .yml file
@@ -47,5 +47,16 @@ public class BasicItemUtil {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String lineToHump(String text) {
+        text = text.toLowerCase();
+        Matcher matcher = UNDERLINE_PATTERN.matcher(text);
+        StringBuffer sb = new StringBuffer();
+        while (matcher.find()) {
+            matcher.appendReplacement(sb, matcher.group(1).toUpperCase());
+        }
+        matcher.appendTail(sb);
+        return sb.toString();
     }
 }
