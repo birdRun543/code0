@@ -9,7 +9,6 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 /**
- * 日期处理工具
  *
  * @author hanbing
  * @date 2019-6-5
@@ -83,23 +82,6 @@ public class DateHandleUtil {
     public static int getDueDay(Date dueDate) {
         Date d1 = addDay(dueDate, -280);
         return dayDiff(d1, new Date());
-    }
-
-    public static Date str2Date(String dayStr) {
-
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//
-//        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-//
-//        try {
-//            return sdf.parse(dayStr);
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return null;
-
-        return str2Date(dayStr, "yyyy-MM-dd");
     }
 
     public static Date str2Date(String dayStr, String formatStr) {
