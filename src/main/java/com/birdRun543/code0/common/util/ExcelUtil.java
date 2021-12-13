@@ -1,10 +1,10 @@
-package com.hele.htalk2.util;
+package com.birdRun543.code0.common.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.shiro.util.Assert;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
@@ -16,6 +16,7 @@ import java.util.Map;
 /**
  * @author hanbing
  */
+@Slf4j
 public class ExcelUtil {
 
     private static HSSFWorkbook initWorkBook(Map<String, String> titleMap) {
@@ -46,16 +47,14 @@ public class ExcelUtil {
      */
     public static void setResponseExportExcelHeader(HttpServletResponse response,
                                                     String name) throws UnsupportedEncodingException {
-        Assert.notNull(response);
-        Assert.notNull(name);
         String s = new String((name + ".xls").getBytes(), "ISO8859-1");
         response.setContentType("application/octet-stream;charset=ISO8859-1");
         response.setHeader("Content-Disposition", "attachment;filename=" + s);
-        response.addHeader("Pargam", "no-cache");
+        response.addHeader("Pragma", "no-cache");
         response.addHeader("Cache-Control", "no-cache");
     }
 
-    public static HSSFWorkbook createExcel(Map<String, String> titleMap, List recordList) {
+    public static <T> HSSFWorkbook createExcel(Map<String, String> titleMap, List<T> recordList) {
         HSSFWorkbook workbook = initWorkBook(titleMap);
 
         HSSFSheet sheet = workbook.getSheet("sheet1");
@@ -73,7 +72,7 @@ public class ExcelUtil {
                     try {
                         sdf.parse(value);
                     } catch (ParseException e) {
-
+                        log.debug(e.getMessage(), e);
                     }
 
                 }
