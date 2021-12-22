@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 /**
  * handle some LocalDateTime format
@@ -44,5 +45,15 @@ public class LocalDateUtil {
     public static int countRemainDay(Integer validDays, LocalDateTime startTime,LocalDateTime currentTime) {
         long betweenDays = Duration.between(startTime, currentTime).toDays();
         return betweenDays > validDays ? 0 : validDays - Math.toIntExact(betweenDays);
+    }
+
+    public static int countHourBetween(LocalDateTime startTime, LocalDateTime currentTime) {
+        return Math.toIntExact(Duration.between(startTime, currentTime).toHours());
+    }
+
+    public static long getMonthDaySize(LocalDateTime currentDay) {
+        LocalDateTime currentMonth = LocalDateTime.of(currentDay.toLocalDate(), LocalTime.MIN).withDayOfMonth(1);
+        LocalDateTime nextMonth = currentMonth.plusMonths(1);
+        return currentMonth.until(nextMonth, ChronoUnit.DAYS);
     }
 }
